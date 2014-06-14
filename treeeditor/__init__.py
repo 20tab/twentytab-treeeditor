@@ -4,5 +4,5 @@ DATE = "2014-06-09"
 
 try:
     from . import conf
-except ImportError:
+except:
     pass

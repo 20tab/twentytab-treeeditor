@@ -19,3 +19,7 @@ INSTALLED_APPS = {
     ...
 }
 ```
+
+- Static files
+
+Run collectstatic command or map static directory.

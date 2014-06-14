@@ -6,18 +6,9 @@ class TreeEditorConf(AppConf):
     STATIC_URL = u'/static/'
     TREE_EDITOR_INCLUDE_ANCESTORS = False
     TREE_EDITOR_OBJECT_PERMISSIONS = False
-    JQUERY_LIB = u"{}{}".format(
-        getattr(settings, u'STATIC_URL', u'/static/'),
-        u"treeeditor/js/jquery-2.1.0.min.js"
-    )
-    JQUERYUI_LIB = u"{}{}".format(
-        getattr(settings, u'STATIC_URL', u'/static/'),
-        u"treeeditor/js/jquery-ui-1.10.4.custom.min.js"
-    )
-    JQUERYUI_CSSLIB = u"{}{}".format(
-        getattr(settings, u'STATIC_URL', u'/static/'),
-        u"treeeditor/css/smoothness/jquery-ui-1.10.4.custom.min.css"
-    )
+    JQUERY_LIB = u"{}{}".format(u'/static/', u"treeeditor/js/jquery-2.1.0.min.js")
+    JQUERYUI_LIB = u"{}{}".format(u'/static/', u"treeeditor/js/jquery-ui-1.10.4.custom.min.js")
+    JQUERYUI_CSSLIB = u"{}{}".format(u'/static/', u"treeeditor/css/smoothness/jquery-ui-1.10.4.custom.min.css")
 
     def configure_static_url(self, value):
         if not getattr(settings, 'STATIC_URL', None):
