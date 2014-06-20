@@ -23,3 +23,5 @@ INSTALLED_APPS = {
 - Static files
 
 Run collectstatic command or map static directory.
+
+** This app overrides {% block filters %} in change_list.html template. **

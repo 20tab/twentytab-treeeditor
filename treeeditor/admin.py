@@ -164,6 +164,7 @@ class TreeEditor(admin.ModelAdmin):
 
     .. _django-mptt: http://github.com/mptt/django-mptt/
     """
+    change_list_template = 'tree_editor.html'
 
     if settings.TREE_EDITOR_INCLUDE_ANCESTORS:
         # Make sure that no pagination is displayed. Slicing is disabled anyway,
@@ -182,10 +183,13 @@ class TreeEditor(admin.ModelAdmin):
                 self.list_display[0] = 'indented_short_title'
         self.list_display_links = ('indented_short_title',)
 
-        opts = self.model._meta
-        self.change_list_template = [
-            'tree_editor.html',
-        ]
+
+        print self.change_list_template
+
+        # opts = self.model._meta
+        # self.change_list_template = [
+        #     ,
+        # ]
 
     def editable(self, item):
         return getattr(item, 'feincms_editable', True)
